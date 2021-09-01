@@ -1,0 +1,17 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+body
+{
+ background-color: azure;
+}
+
+#cookieForm{
+ background-color: blue;
+}
+input{
+    padding: 5px;
+}
