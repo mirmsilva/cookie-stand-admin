@@ -7,11 +7,60 @@
 body
 {
  background-color: azure;
+ align-items: center;
+}
+.header{
+    background-color: teal;
+    height: 4vw;
 }
 
-#cookieForm{
- background-color: blue;
+.formDiv{
+    margin-top: 5vw;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    display:flex;
+    justify-content: space-around;
+    background-color:rgb(102, 194, 194) ;
+    border-radius: 1em;
+    height: 10em;
 }
-input{
-    padding: 5px;
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.inputField{
+    display:flex;
+    justify-content: space-between;
+}
+.min{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+
+}
+.max{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    padding-left: 3vw;
+    padding-right: 3vw;
+
+}
+.avg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding-right: 3vw; 
+
+}
+.footer{
+    margin-top: 5vw;
+    background-color: teal;
+    height: 4em;
+}
+#formButton{
+    background-color: teal;
+    width:7em;
+    border-radius: 4px;
 }

@@ -1,19 +1,47 @@
+import React, {useState} from "react";
+
 function Form(){
+    const [formInput, setFormInput] = useState({});
+
+    const handleChange = (e) => {
+        setFormInput({...formInput,[e.target.name]: e.target.value})
+    }
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        props.onSubmit(formInput);
+        e.target.reset();
+    }
     return(
         <>
-        <div className = "w-full max-w-xs">
-        <h2>Create Cookie Stand </h2>
-        <form className = "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-            <label>Create Cookie Stand </label>
+        <div class="formDiv">
+        <form class="storeForm" onSubmit= {onSubmit}>
+            <div class="inputContainer">
+            <h2>Create Cookie Stand </h2>
+            <div class="location">
             <label>Location</label>
-            <input type = "text" placeholder="location"/>
+            <input name="location" placeholder="location" onChange={handleChange}/>
+            </div>
+
+            <div class="inputField">
+            <div class="min">
             <label>Minimum Customers per Hour</label>
-            <input type = "number"  placeholder="Min"/>
+            <input name = "min"  placeholder="Min" onChange={handleChange}/>
+            </div>
+
+            <div class="max">
             <label>Maximum Numbers per Hour</label>
-            <input type = "number" placeholder="Max"/>
+            <input name = "max" placeholder="Max" onChange={handleChange}/>
+            </div>
+
+            <div class="avg">
             <label>Average Cookies per Sale</label>
-            <input type = "number" placeholder="Avg"/>
-            <button>Create</button>
+            <input name = "avg" placeholder="Avg" onChange={handleChange}/>
+            </div>
+
+            <button id="formButton" type="submit">Create</button>
+            </div>
+            </div>
         </form>
         </div>
         </>
